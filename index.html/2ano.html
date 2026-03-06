@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Pessoais</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: "Ephesis", serif;
+            background-color: #255e74;
+            color: #efebf3; 
+            padding: 20px;
+        }
+
+        h2 {
+            color: #f0f0f0;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* BOTÕES */
+        .botao {
+            text-decoration: none;
+            color: white;
+            background: #7173c8;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+        }
+
+        .botao:hover {
+            background: #efebf3;
+            color: #255e74;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .botoes-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        /* GALERIA */
+        .galeria {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            position: relative;
+        }
+
+        /* Linha vertical no meio */
+        .galeria::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #ffffff;
+        }
+
+        p {
+            text-align: left;
+            font-size: 20px;
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 30px;
+        }
+
+        .fotos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        img, video {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria::before {
+                display: none;
+            }
+
+            img, video {
+                height: 250px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>2º ano do ensino médio</h2>
+
+    <div class="botoes-wrapper">
+        <a class="botao" href="index.html">Homepage</a>
+        <a class="botao" href="academico.html">Acadêmico</a>
+        <a class="botao" href="pessoais.html">Pessoal</a>
+        <a class="botao" href="1ano.html">1º Ano</a>
+        <a class="botao" href="3ano.html">3º Ano</a>
+    </div>
+
+    <main> 
+        <section class="galeria">
+
+            <div>
+                <p>
+                    <strong>Sobre a trajetória:</strong><br><br>
+                    O meu segundo ano foi diferente, com muitas experiências novas. 
+                    Comecei a fazer o curso de Desenvolvimento de Sistemas. No início, eu não gostava 
+                    tanto do curso, mas, ao longo do ano fui me adaptando e comecei a gostar bastante.
+                    Fiz o segundo ano do Ensino Médio em 2025, conheci novas pessoas
+                    e construí várias amizades.
+                </p>
+            </div>
+
+            <div class="fotos-container">
+                <img src="fotos/2ano.jpeg" alt="Foto turma">
+            </div>
+        </section>
+<br>
+<br>
+
+        <section class="galeria">
+            <div class="fotos-container">
+                <img src="fotos/meninas2ano.jpg"Foto turma">
+            </div>  
+
+            <div>
+                <p>
+                    <strong>Minhas metas de 2025:</strong><br><br>
+                    No segundo ano, meu plano era ser advogada criminalista. Sempre me identifiquei com essa área e com os desafios que ela traz.
+                    No início de 2025, eu comecei a pesquisar mais sobre essa área, e foi assim que comecei a perceber 
+                    que talvez não era aquilo que eu queria.
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
